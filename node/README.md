@@ -28,7 +28,8 @@ HTTP1.x的header带有大量信息，而且每次都要重复发送，HTTP/2使�
 >- http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
 >- http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。
 >
-5. 跨域的几种方法，以及什么是跨域 [Reference](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
+
+3. 跨域的几种方法，以及什么是跨域 [Reference](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
 > 跨域方法:
 > 1. jsonp跨域：在js中，我们直接用XMLHttpRequest请求不同域上的数据时，是不可以的。但是，在页面上引入不同域上的js脚本文件却是可以的，jsonp正是利用这个特性来实现的。
 > 2. 修改document.domain跨子域：document.domain的设置是有限制的，我们只能把document.domain设置成自身或更高一级的父域，且主域必须相同。例如：a.b.example.com 中某个文档的document.domain 可以设成a.b.example.com、b.example.com 、example.com中的任意一个，但是不可以设成 c.a.b.example.com,因为这是当前域的子域，也不可以设成baidu.com,因为主域已经不相同了。

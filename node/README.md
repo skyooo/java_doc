@@ -43,6 +43,5 @@ HTTP1.x的header带有大量信息，而且每次都要重复发送，HTTP/2使�
 >
 >
 > 同源：指域名，协议，端口均相同。两个域名之间不能跨过域名来发送请求或者请求数据，否则就是不安全的，这种不安全也就是CSRF（Cross-site request forgery），中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF。
-> ![CSRF](../images/csrf.png)  
 > xss：跨站脚本攻击(Cross Site Scripting) 恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。  
 

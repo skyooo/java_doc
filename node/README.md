@@ -45,3 +45,17 @@ HTTP1.x的header带有大量信息，而且每次都要重复发送，HTTP/2使�
 > 同源：指域名，协议，端口均相同。两个域名之间不能跨过域名来发送请求或者请求数据，否则就是不安全的，这种不安全也就是CSRF（Cross-site request forgery），中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF。
 > xss：跨站脚本攻击(Cross Site Scripting) 恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。  
 
+4. Arrays.sort实现原理和Collections.sort实现原理
+> Collections.sort方法底层会调用Arrays.sort方法，底层实现都是TimeSort实现的。TimSort算法就是找到已经排好序数据的子序列，然后对剩余部分排序，然后合并起来
+
+5.反射中，Class.forName和ClassLoader区别
+> 分析 Class.forName()和ClassLoader.loadClass
+~~~
+ Class.forName(className)方法，内部实际调用的方法是  Class.forName(className,true,classloader);
+ 第2个boolean参数表示类是否需要初始化，  Class.forName(className)默认是需要初始化。
+ 一旦初始化，就会触发目标对象的 static块代码执行，static参数也也会被再次初始化。
+ 
+ ClassLoader.loadClass(className)方法，内部实际调用的方法是  ClassLoader.loadClass(className,false);
+ 第2个 boolean参数，表示目标对象是否进行链接，false表示不进行链接，由上面介绍可以，
+ 不进行链接意味着不进行包括初始化等一些列步骤，那么静态块和静态对象就不会得到执行
+~~~

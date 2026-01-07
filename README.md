@@ -1,27 +1,6 @@
 # java_doc
 相关知识整理
 
-## Windows BAT 脚本解决方案
-
-本项目包含了 Windows BAT 脚本的改进方案，解决 mshta 在 Windows 11 上的兼容性问题。
-
-📁 **脚本文件：**
-- `localServer_improved.bat` - ⭐ 推荐方案（自动检测）
-- `localServer_powershell.bat` - PowerShell 版本
-- `localServer_launcher.vbs` + `localServer_core.bat` - VBScript 版本
-- `localServer_advanced.bat` - 高级版（带日志记录）
-- `test_compatibility.bat` - 兼容性测试工具
-
-📖 **文档：**
-- [📍 索引导航](./INDEX.md) - 快速找到所需内容
-- [🚀 快速开始指南](./QUICK_START.md) - 5 秒选方案
-- [📘 完整技术文档](./BAT_SCRIPT_GUIDE.md) - 原理和故障排查
-- [📋 脚本总览](./WINDOWS_BAT_SCRIPTS_README.md) - 项目概述
-- [🆚 原始 vs 改进对比](./COMPARISON.md) - 详细对比分析
-- [📝 变更日志](./CHANGELOG.md) - 版本历史
-
----
-
 ## Java 知识整理
 
 ### 1.反射中，Class.forName和ClassLoader区别
